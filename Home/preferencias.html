@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferencias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="preferencias.css">
+</head>
+    <body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <div class="form-card1">
+                    <div class="form-card2">
+                        <form class="form">
+                            <div class="row align-items-center">
+                            <div class="col-auto">
+                            <button class="button"  onclick="redirectToPage()">
+                                <div class="button-box">
+                                    <span class="button-elem">
+                                        <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="button-elem">
+                                        <svg viewBox="0 0 46 40">
+                                            <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </button>
+                        </div>
+                            <div class="col">
+                                <p class="form-heading">Preferencias de usuario</p>
+                            </div>
+                            <div class="col-auto">
+                            <button class="button"  onclick="redirectToPage2()">
+                                <div class="button-box">
+                                    <span class="button-elem">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16" style="transform-origin: center; transform: translateX(-10%) rotate(180deg);">
+                                            <path fill="#fff" d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="button-elem">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16" style="transform-origin: center; transform: translateX(-16%) rotate(180deg);">
+                                            <path fill="#fff" d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" style="transform: translateX(-10%);"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </button>
+                            </div>
+                        </div>
+                    
+                            <div class="form-field">
+                                <input required="" placeholder="Ingrese su número telefónico" class="input-field" type="text" />
+                            </div>
+                    
+                            <div class="form-field">
+                            <input
+                                required=""
+                                placeholder="Ingrese su fecha de nacimiento"
+                                class="input-field"
+                                type="date"
+                            />
+                            </div>
+                    
+                            <div class="form-field">
+                                <div class="gender-box">
+                                    <p class="gender-title">Género</p>
+                                    <div class="gender-option">
+                                        <div class="gender">
+                                            <input checked="" name="gender" id="check-male" type="radio">
+                                            <label for="check-male">Másculino</label>
+                                        </div>
+                                        <div class="gender">
+                                            <input name="gender" id="check-female" type="radio">
+                                            <label for="check-female">Femenino</label>
+                                        </div>
+                                        <div class="gender">
+                                            <input name="gender" id="check-other" type="radio">
+                                            <label for="check-other">Otro</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-field">
+                                <div class="gender-box">
+                                    <p class="gender-title">Modo</p>
+                                    <div class="gender-option">
+                                        <div class="gender">
+                                            <input checked="" name="modo" id="check-oscuro" type="radio">
+                                            <label for="check-male">Oscuro</label>
+                                        </div>
+                                        <div class="gender">
+                                            <input name="modo" id="check-claro" type="radio">
+                                            <label for="check-female">Claro</label>
+                                        </div>
+                                        <div class="gender">
+                                            <input name="modo" id="check-prede" type="radio">
+                                            <label for="check-other">Predeterminado</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <div class="gender-box">
+                                    <p class="gender-title">¿Desea recibir notificaciones?</p>
+                                    <div class="gender-option">
+                                        <div class="gender">
+                                            <input checked="" name="noti" id="check-si" type="radio">
+                                            <label for="check-male">Si</label>
+                                        </div>
+                                        <div class="gender">
+                                            <input name="noti" id="check-no" type="radio">
+                                            <label for="check-female">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="redirectToPage3()"class="sendMessage-btn">Envíar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPage() {
+            event.preventDefault();
+            
+            // Redirigir a otra página después de enviar el formulario
+            window.location.href = 'Entrar.html';
+        }
+        function redirectToPage2() {
+            event.preventDefault();
+            
+            // Redirigir a otra página después de enviar el formulario
+            window.location.href = 'usuario.html';
+        }
+
+        function redirectToPage3() {
+            event.preventDefault();
+            
+            // Redirigir a otra página después de enviar el formulario
+            window.location.href = 'usuario.html';
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

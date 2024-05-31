@@ -1,0 +1,93 @@
+body{
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+            circle farthest-side at 0% 50%,
+            #282828 23.5%,
+            rgba(255, 170, 0, 0) 0
+        )
+        21px 30px,
+        radial-gradient(
+            circle farthest-side at 0% 50%,
+            #2c3539 24%,
+            rgba(240, 166, 17, 0) 0
+        )
+        19px 30px,
+        linear-gradient(
+            #282828 14%,
+            rgba(240, 166, 17, 0) 0,
+            rgba(240, 166, 17, 0) 85%,
+            #282828 0
+        )
+        0 0,
+        linear-gradient(
+            150deg,
+            #282828 24%,
+            #2c3539 0,
+            #2c3539 26%,
+            rgba(240, 166, 17, 0) 0,
+            rgba(240, 166, 17, 0) 74%,
+            #2c3539 0,
+            #2c3539 76%,
+            #282828 0
+        )
+        0 0,
+        linear-gradient(
+            30deg,
+            #282828 24%,
+            #2c3539 0,
+            #2c3539 26%,
+            rgba(240, 166, 17, 0) 0,
+            rgba(240, 166, 17, 0) 74%,
+            #2c3539 0,
+            #2c3539 76%,
+            #282828 0
+        )
+        0 0,
+        linear-gradient(90deg, #2c3539 2%, #282828 0, #282828 98%, #2c3539 0%) 0 0
+        #282828;
+    background-size: 40px 60px;
+}
+
+
+.btn-1{
+    background-color: purple;
+    color: white;
+}
+
+.btn-1:hover {
+    background-color:rgb(173, 14, 128);
+    color: white;
+}
+
+h2 {
+    margin-top: -10px; /* Puedes ajustar este valor según lo necesites */
+}
+
+.custom-collapse {
+    background-color: rgba(195, 131, 223, 0.452);
+    padding: 20px; /* Ajusta el relleno si es necesario */
+}
+
+.home-icon {
+    font-size: 2.5em; /* Ajusta el tamaño del ícono según sea necesario */
+    vertical-align: middle;
+}
+
+.title {
+    margin-bottom: 0;
+    margin-top: 0;
+    color: rgb(152, 32, 152);
+}
+
+.btn-custom {
+    background-color: #983298; /* Color personalizado para el botón */
+    color: white; /* Color del texto del botón */
+}
+.btn-custom:hover {
+    background-color: #762887; /* Color del botón al pasar el cursor */
+}
+::placeholder {
+    color: rgb(228, 154, 207); /* Color del placeholder */
+    opacity: 1; /* Para asegurar que el color se aplique bien */
+}

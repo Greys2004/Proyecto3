@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Catálogo</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="catalogo.css" rel="stylesheet">
+    
+</head>
+
+<body id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+        <!-- Agregar imagen -->
+        <a class="navbar-brand" href="usuario.html"><img src="assets/img/logos/LogoS_03.png"/></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ms-1"></i>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item">
+                        <div class="container">
+    <input type="text" name="text" class="input" required="" placeholder="Type to search...">
+    <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+            <title>Search</title>
+            <path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path>
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"></path>
+        </svg>
+    </div>
+</div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="usuario.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#carritoModal">Carrito</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#usuarioModal">Mi cuenta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Entrar.html">Cerrar sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+<!-- Usuario Modal -->
+<div class="modal fade" id="usuarioModal" tabindex="-1" role="dialog" aria-labelledby="usuarioModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="usuarioModalLabel">Mi Cuenta</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="position-relative rounded-circle mx-auto mt-3 mb-4" style="width: 150px; height: 150px; overflow: hidden;">
+                    <img src="https://plus.unsplash.com/premium_photo-1663047504447-d54e624ef2d5?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Foto de perfil" style="width: 100%; height: auto;">
+                </div>
+                <h4>Nombre de Usuario</h4>
+                <div class="mt-4">
+                    <button class="btn btn-primary mb-2">Teléfono</button>
+                    <button class="btn btn-primary mb-2">Correo</button>
+                    <button class="btn btn-primary mb-2">Dirección</button>
+                    <button class="btn btn-primary mb-2">Métodos de Pago</button>
+                    <button class="btn btn-primary mb-2">Mis Compras</button>
+                    <button class="btn btn-primary mb-2">Configuración</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Carrito Modal -->
+    <div class="modal fade" id="carritoModal" tabindex="-1" role="dialog" aria-labelledby="carritoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="carritoModalLabel">Carrito de Compras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Imagen</th>
+                                <th scope="col">Nombre del producto</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Precio Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="carritoItems">
+                            <!-- Aquí se llenarán los productos del carrito -->
+                        </tbody>
+                    </table>
+                    <div class="text-end">
+                        <h5>Total: $<span id="precioTotal">0.00</span></h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Proceder al Pago</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3 mt-lg-5">Menú</h1>
+            <div class="d-inline-flex align-items-center text-white"></div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Products Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h1 class="section-title position-relative text-center mb-5">Un mundo de sabor a un clic</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                            <h4 class="font-weight-bold text-white mb-0">$40</h4>
+                        </div>
+                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                            <img class="rounded-circle w-100 h-100" src="https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=600" style="object-fit: cover;">
+                        </div>
+                        <h5 class="font-weight-bold mb-4">Cup cake</h5>
+                        <a href="" class="btn btn-sm btn-secondary">Ordena ahora</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                            <h4 class="font-weight-bold text-white mb-0">$30</h4>
+                        </div>
+                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                            <img class="rounded-circle w-100 h-100" src="https://images.pexels.com/photos/2955819/pexels-photo-2955819.jpeg?auto=compress&cs=tinysrgb&w=600" style="object-fit: cover;">
+                        </div>
+                        <h5 class="font-weight-bold mb-4">Burritos</h5>
+                        <a href="" class="btn btn-sm btn-secondary">Ordena ahora</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                            <h4 class="font-weight-bold text-white mb-0">$110</h4>
+                        </div>
+                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                            <img class="rounded-circle w-100 h-100" src="https://images.pexels.com/photos/21296401/pexels-photo-21296401/free-photo-of-cena-almuerzo-comida-comida-rapida.jpeg?auto=compress&cs=tinysrgb&w=600" style="object-fit: cover;">
+                        </div>
+                        <h5 class="font-weight-bold mb-4">Hamburguesas</h5>
+                        <a href="" class="btn btn-sm btn-secondary">Ordena ahora</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                            <h4 class="font-weight-bold text-white mb-0">$70</h4>
+                        </div>
+                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                            <img class="rounded-circle w-100 h-100" src="https://images.pexels.com/photos/6270541/pexels-photo-6270541.jpeg?auto=compress&cs=tinysrgb&w=600" style="object-fit: cover;">
+                        </div>
+                        <h5 class="font-weight-bold mb-4">Camarones</h5>
+                        <a href="" class="btn btn-sm btn-secondary">Ordena ahora</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                            <h4 class="font-weight-bold text-white mb-0">$120</h4>
+                        </div>
+                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                            <img class="rounded-circle w-100 h-100" src="https://images.pexels.com/photos/9792476/pexels-photo-9792476.jpeg?auto=compress&cs=tinysrgb&w=600" style="object-fit: cover;">
+                        </div>
+                        <h5 class="font-weight-bold mb-4">Pizza</h5>
+                        <a href="" class="btn btn-sm btn-secondary">Ordena ahora</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                            <h4 class="font-weight-bold text-white mb-0">$145</h4>
+                        </div>
+                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                            <img class="rounded-circle w-100 h-100" src="https://images.pexels.com/photos/15197998/pexels-photo-15197998/free-photo-of-aperitivo-frito-fotografia-de-comida-sushi.jpeg?auto=compress&cs=tinysrgb&w=600" style="object-fit: cover;">
+                        </div>
+                        <h5 class="font-weight-bold mb-4">Sushi</h5>
+                        <a href="" class="btn btn-sm btn-secondary">Ordena ahora</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
+                        </div>
+                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                            <img class="rounded-circle w-100 h-100" src="https://media.istockphoto.com/id/1430849921/es/foto/orden-de-tacos-closeup.jpg?b=1&s=612x612&w=0&k=20&c=Zilhgtz-XGWNH7vTTA9hUQh9tucMLhG7bsgnxAezSTI=" style="object-fit: cover;">
+                        </div>
+                        <h5 class="font-weight-bold mb-4">Tacos de bistec</h5>
+                        <a href="" class="btn btn-sm btn-secondary">Ordena ahora</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                            <h4 class="font-weight-bold text-white mb-0">$15</h4>
+                        </div>
+                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                            <img class="rounded-circle w-100 h-100" src="https://images.pexels.com/photos/20293341/pexels-photo-20293341/free-photo-of-resfriado-frio-beber-bebida.jpeg?auto=compress&cs=tinysrgb&w=600" style="object-fit: cover;">
+                        </div>
+                        <h5 class="font-weight-bold mb-4">Refrescos</h5>
+                        <a href="" class="btn btn-sm btn-secondary">Ordena ahora</a>
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <a href="" class="btn btn-primary py-3 px-5">Cargar más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Products End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <script>
+        // Simulación de productos en el carrito
+        const carrito = [
+            {
+                nombre: 'Cup cake',
+                imagen: 'https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=600',
+                cantidad: 2,
+                precio: 40
+            },
+            {
+                nombre: 'Hamburguesas',
+                imagen: 'https://images.pexels.com/photos/21296401/pexels-photo-21296401/free-photo-of-cena-almuerzo-comida-comida-rapida.jpeg?auto=compress&cs=tinysrgb&w=600',
+                cantidad: 1,
+                precio: 110
+            }
+        ];
+
+        // Función para actualizar el carrito modal
+        function actualizarCarrito() {
+            const carritoItems = document.getElementById('carritoItems');
+            const precioTotal = document.getElementById('precioTotal');
+            carritoItems.innerHTML = '';
+
+            let total = 0;
+            carrito.forEach(item => {
+                const totalItem = item.precio * item.cantidad;
+                total += totalItem;
+                carritoItems.innerHTML += `
+                    <tr>
+                        <td><img src="${item.imagen}" class="img-fluid" style="width: 50px; height: 50px;"></td>
+                        <td>${item.nombre}</td>
+                        <td>${item.cantidad}</td>
+                        <td>$${item.precio}</td>
+                        <td>$${totalItem}</td>
+                    </tr>
+                `;
+            });
+
+            precioTotal.textContent = total.toFixed(2);
+        }
+
+        // Llama a la función para actualizar el carrito cuando el documento esté listo
+        document.addEventListener('DOMContentLoaded', () => {
+            actualizarCarrito();
+        });
+
+        // Manejar la apertura del modal desde el enlace del carrito
+        document.querySelector('a[href="#"]').addEventListener('click', (e) => {
+            e.preventDefault();
+            const carritoModal = new bootstrap.Modal(document.getElementById('carritoModal'));
+            carritoModal.show();
+        });
+    </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="catalogo.js"></script>
+</body>
+
+</html>
